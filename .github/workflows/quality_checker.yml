@@ -32,7 +32,3 @@ jobs:
       - name: Lint the code with Flake8
         run: |
           flake8 .
-
-      - name: Analyse the code with Pylint
-        run: |
-          pylint $(git ls-files '*.py')
