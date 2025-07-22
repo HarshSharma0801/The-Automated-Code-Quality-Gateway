@@ -29,31 +29,41 @@ As a DevOps engineer in a fast-growing startup, you're tasked with preventing po
 
 Create FastAPI application with concurrent API calls to JSONPlaceholder
 
-![Screenshot placeholder - Application structure]()
+<img width="860" height="597" alt="Screenshot 2025-07-22 at 10 09 05 PM" src="https://github.com/user-attachments/assets/9d6ccd31-aceb-4e36-9518-87c4a4028b73" />
+
 
 ### Step 2: Configure Code Quality Tools
 
-Set up Black, Flake8, and Pylint with configuration files
+Set up Black, Flake8 with configuration files
 
-![Screenshot placeholder - Quality tools configuration]()
+<img width="983" height="459" alt="Screenshot 2025-07-22 at 10 00 59 PM" src="https://github.com/user-attachments/assets/a65b742e-fcdd-41ed-ac57-c82696684288" />
+
 
 ### Step 3: Create GitHub Actions Workflow
 
 Implement automated quality checking on push/PR events
 
-![Screenshot placeholder - Workflow file]()
+<img width="860" height="658" alt="Screenshot 2025-07-22 at 10 15 58 PM" src="https://github.com/user-attachments/assets/49f27a90-df8e-4faa-a1da-cb9f85fda3b2" />
 
-### Step 4: Test Quality Checks
 
-Verify all tools pass with 10/10 Pylint score
+### Step 4: Add Main Branch Protection rule for Quality Checks
 
-![Screenshot placeholder - Quality check results]()
+Add qulaity checks on main branch so that it gets merged only when the github workflow passes 
 
-### Step 5: Run Application
+<img width="860" height="597" alt="Screenshot 2025-07-22 at 10 12 28 PM" src="https://github.com/user-attachments/assets/0267e2d4-1ff7-4880-86e6-dae6938383bf" />
+
+
+### Step 4: Push to main or make demo PR
+
+<img width="860" height="597" alt="Screenshot 2025-07-22 at 10 13 59 PM" src="https://github.com/user-attachments/assets/5264b737-e3a0-45f9-bb45-83892848df97" />
+
+
+### Step 5: Verify Checks in Actions Tab
 
 Start the FastAPI server and test concurrent endpoints
 
-![Screenshot placeholder - Running application]()
+<img width="860" height="597" alt="Screenshot 2025-07-22 at 10 14 18 PM" src="https://github.com/user-attachments/assets/06028d53-4803-40cb-8feb-8664985c0df0" />
+
 
 ## 🚀 Quick Start
 
@@ -62,25 +72,11 @@ Start the FastAPI server and test concurrent endpoints
 pip install -r requirements.txt
 
 # Run quality checks
-black --check . && flake8 . && pylint main.py
+black --check . && flake8 . 
 
 # Start the application
 python main.py
 ```
 
-## 📊 API Endpoints
 
-- `GET /` - API information
-- `GET /health` - Health check with external API status
-- `POST /todos/users/batch` - Concurrent user data fetching
-- `GET /todos/analytics` - Performance analytics
-- `GET /todos/performance-test` - Concurrent performance testing
 
-## ✅ Quality Gates
-
-The Python application enforces:
-
-- **Black**: Code formatting compliance
-- **Flake8**: PEP 8 style guide adherence
-- **Pylint**: Code quality scoring (10/10 achieved)
-- **GitHub Actions**: Automated checks on every push/PR
